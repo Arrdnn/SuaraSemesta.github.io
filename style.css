@@ -8,7 +8,7 @@ body {
     margin: 0%;
     padding: 0%;
     font-family: 'Open Sans',sans-serif;
-    background: #ffffff;
+    background: #C1F8CF;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     font-size: 17px;
@@ -24,8 +24,9 @@ body {
     font-size: 40px;
     font-weight: bold;
     float: left;
-    font-family: courier;
-    color: #364f6b;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #141E27;
+    margin-top: 14px;
 }
 
 .menu {
@@ -36,11 +37,11 @@ nav {
     width: 100%;
     margin: auto;
     display: flex;
-    line-height: 80px;
+    line-height: 40px;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background: #B4CFB0;
+    background: #EFFFFD;
     z-index: 1;
     border-bottom: 1px solid #364f6b;
 }
@@ -54,6 +55,7 @@ nav ul {
 
 nav ul li {
     float: left;
+    margin-top: 13px;
 }
 
 nav ul li a {
@@ -80,13 +82,14 @@ section {
 }
 
 .kolom .deskripsi {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'comic sans ms';
     color: #364f6b;
 }
 
 h2 {
+    margin: 10px 0px 10px 0px;
     font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 40px;
@@ -100,7 +103,7 @@ a.tbl-biru {
     background: #3f72af;
     border-radius: 20px;
     margin-top: 20px;
-    padding: 12px 17px 12px 17px;
+    padding: 5px 10px 5px 10px;
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
@@ -122,8 +125,8 @@ a.tbl-pink {
 }
 
 p {
-    margin: 10px 0px 10px 0px;
-    padding: 10px 0px 10px 0px;
+    margin: 10px 6px 10px 6px;
+    padding: 10px 6px 10px 6px;
 }
 
 a.tbl-pink:hover {
@@ -136,24 +139,25 @@ a.tbl-pink:hover {
     width: 100%;
 }
 
-.tutor-list {
+.dsign-list {
     width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
-.kartu-tutor {
+.kartu-dsign {
     width: 20%;
     margin: 0 auto;
 }
 
-.kartu-tutor img {
+.kartu-dsign img {
     width: 80%;
-    border-radius: 50%;
+    border-radius: 100%;
+    margin-left: 23px;
 }
 
-.kartu-tutor p {
+.kartu-dsign p {
     font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 25px;
@@ -175,20 +179,18 @@ a.tbl-pink:hover {
 
 .kartu-partner img {
     width: 150px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
-#contact {
+#penutup {
     background: #dedede;
-    padding: 50px 0px 50px 0px;
+    padding: 20px 0px 20px 0px;
 }
 
 .footer {
     width: 100%;
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
+    margin: 10px 0px 10px 0px;
 }
 
 .footer-section {
@@ -204,6 +206,10 @@ h3 {
     color: #364f6b;
     width: 100%;
     line-height: 50px;
+}
+
+.footer-section p {
+    font-size: 15px;
 }
 
 #copyright {
@@ -250,11 +256,18 @@ h3 {
         height: auto;
     }
 
-    .kartu-tutor {
+    .kartu-dsign {
+        width: 50%;
+    }
+
+    .kartu-dsign {
         width: 50%;
     }
 
     .kartu-partner {
-        width: 50%;
+        width: 35%;
+        display: flex;
+        height: auto;
+        margin-bottom: 60px;
     }
 }
