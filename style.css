@@ -10,7 +10,6 @@ body {
     font-family: 'Open Sans',sans-serif;
     background: #C1F8CF;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
     font-size: 17px;
 }
 
@@ -103,7 +102,7 @@ a.tbl-biru {
     background: #3f72af;
     border-radius: 20px;
     margin-top: 20px;
-    padding: 5px 10px 5px 10px;
+    padding: 3px 7px 3px 7px;
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
@@ -268,6 +267,6 @@ h3 {
         width: 35%;
         display: flex;
         height: auto;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }
