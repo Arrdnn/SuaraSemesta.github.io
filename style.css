@@ -8,15 +8,86 @@ body {
     margin: 0%;
     padding: 0%;
     font-family: 'Open Sans',sans-serif;
+    overflow-x: hidden;
     background: #C1F8CF;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 17px;
 }
 
+.btn-floating {
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+    border-radius: 100px;
+    border: 0;
+    z-index: 1;
+    color: #333;
+    transition: .2s;
+}
+
+.btn-floating img {
+    width: 40px;
+}
+
 .wrapper {
     width: 1110px;
     margin: auto;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    bottom: 30px;
+    padding: 0px 6px;
+    justify-content: space-between;
     position: relative;
+    z-index: 1;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: blueviolet;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: firebrick;
+    transform: rotate(45deg)   translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: firebrick;
+    transform: rotate(-45deg)   translate(0px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
 }
 
 .logo a {
@@ -28,45 +99,41 @@ body {
     margin-top: 14px;
 }
 
-.menu {
-    float: right;
-}
-
 nav {
     width: 100%;
     margin: auto;
     display: flex;
-    line-height: 40px;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+    justify-content: space-around;
     background: #EFFFFD;
-    z-index: 1;
-    border-bottom: 1px solid #364f6b;
+    padding-bottom: 12px;
 }
 
 nav ul {
+    display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;   
+    width: 20%;
+    justify-content: space-between; 
 }
 
 nav ul li {
-    float: left;
-    margin-top: 13px;
+    float: right;
+    margin-top: 23px;
+    margin-left: 100px;
 }
 
 nav ul li a {
     color: black;
     font-weight: bold;
-    text-align: center;
+    text-align: right;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #fc5185;
+    background-color: #ddd;
+    padding: 30px 15px 30px 15px;
 }
 
 section {
@@ -213,6 +280,55 @@ h3 {
     font-size: 15px;
 }
 
+.spinner {
+    margin: 100px auto; width: 50px;
+    height: 40px; text-align: center;
+    font-size: 10px;
+}
+
+.spinner > div {
+    background-color: #333;
+    height: 100%; width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out; animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4);}
+    20% { -webkit-transform: scaleY(1.0);}
+}
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    } 20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
 #copyright {
     text-align: center;
     width: 100%;
@@ -220,31 +336,55 @@ h3 {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
     .wrapper {
         width: 90%;
     }
 
+    .menu-toggle {
+        display: flex;
+        float: right;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        padding-right: 45px;
+        padding-left: 90px;
+        background-color: #EFFFFD;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul li a:hover {
+        background-color: #ddd;
+        padding: 8px 900px 8px 900px;
+    }
+
+    nav ul.slide {
+        transform: translateY(0);
+        opacity: 200%;
+    }    
+
     .logo a{
         display: block;
         width: 100%;
-        text-align: center;
-    }
-
-    nav .menu {
-        width: 100%;
-        margin: 0;
-    }
-    
-    nav .menu ul {
-        text-align: center;
-        margin: auto;
-        line-height: 40px;
-    }
-
-    nav .menu li {
-        display: inline-block;
-        float: none;
+        text-align: left;
     }
 
     section {
@@ -265,10 +405,27 @@ h3 {
         width: 50%;
     }
 
-    .kartu-partner {
-        width: 35%;
+    .partner-list{
         display: flex;
-        height: auto;
+        justify-content: space-around;
+    } 
+
+    .partner-list img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .kartu-partner {
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        height: 100px;
         margin-bottom: 40px;
     }
+
+    .spinner {
+        margin-top: 0.1;
+        margin-bottom: 0;
+    }
+
 }

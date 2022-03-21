@@ -2,24 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Visual Art</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#">
+        <button class="btn-floating">
+            <img src="panah.png" alt="Awalan">
+        </button>
+    </a>
+    
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href=""><MARQUEE>My Visual Art.</MARQUEE></a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#awalan">Awalan</a></li>
-                    <li><a href="#isi">Isi</a></li>
-                    <li><a href="#dsign">Dsign</a></li>
-                    <li><a href="#partner">Partner</a></li>
-                    <li><a href="#penutup">Penutup</a></li>
-                </ul>
-            </div>
+            <div class="logo"><a href="">My Visual Art.</a>
         </div>
+
+        <ul>
+            <li><a href="#awalan">Awalan</a></li>
+            <li><a href="#isi">Isi</a></li>
+            <li><a href="#dsign">Dsign</a></li>
+            <li><a href="#partner">Partner</a></li>
+            <li><a href="#penutup">Penutup</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </nav>
     <div class="wrapper">
         <!-- untuk awalan -->
@@ -37,7 +51,7 @@
                 <div class="kolom">
                     <p class="deskripsi">Bagian 2. Isi</p>
                     <h2>Cerita gua</h2>
-                    <p>Gua akan menjelaskan sedikit mengenai kesukaan gua ngedesain. Itu bermula ketika gua masih kecil dan gua itu bisa dibilang kreatif karena setiap kali ada 2 mainan pasti gua gabungin jadi satu, gua juga dulu suka ngegambar ditembok rumah sampai banyak coretan dimana-mana. Gua sekarang juga masih suka ngegambar di kertas, dan ya mungkin itulah faktor yang mendorong gua mencoba desain virtual. Oh iya software yang biasa gua gunain dalam pendesainan adalah Adobe Illustraor 2020, tapi kadang gua juga ngedesain di aplikasi android yakni Ibis Paint. Dan dibawah ini adalah contoh gua ngedesain di Ibis Paint, dilanjutkan dibawahnya yang adalah hasil gua ngedesain di Adobe Illustrator.</p>
+                    <p>Gua akan menjelaskan sedikit mengenai kesukaan gua ngedesain. Itu bermula ketika gua masih kecil dan gua itu bisa dibilang kreatif karena setiap kali ada 2 mainan pasti gua gabungin jadi satu, gua juga dulu suka ngegambar ditembok rumah sampai banyak coretan dimana-mana. Gua sekarang juga masih suka ngegambar di kertas, dan ya mungkin itulah faktor yang mendorong gua mencoba desain virtual. Oh iya software yang biasa gua gunain dalam pendesainan adalah Adobe Illustrator 2020, tapi kadang gua juga ngedesain di aplikasi android yakni Ibis Paint. Dan dibawah ini adalah contoh gua ngedesain di Ibis Paint, dilanjutkan dibawahnya yang adalah hasil gua ngedesain di Adobe Illustrator.</p>
                 </div>
                 
                 <div class="dsign-list">
@@ -115,7 +129,7 @@
             <img src="ASTRO.jpg">
         </section>
 
-        <!-- untuk partners-->
+        <!-- untuk partners -->
         <section id="partner">
             <div class="tengah">
                 <div class="kolom">
@@ -126,20 +140,15 @@
                 </div>
 
                 <div class="partner-list">
-                    <div class="kartu-partner">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.4SjejhTJTAbiTGUhCQDg-gHaHO&pid=Api&P=0&w=190&h=185"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://tse2.mm.bing.net/th?id=OIP.xllIBn_f4T1rTxO-tSJk1wHaFC&pid=Api&P=0&w=204&h=139"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.euylJa-iIJgHwV2oIbLyxgHaHa&pid=Api&P=0&w=165&h=165"/>
-                    </div>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.4SjejhTJTAbiTGUhCQDg-gHaHO&pid=Api&P=0&w=190&h=185"/>
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.xllIBn_f4T1rTxO-tSJk1wHaFC&pid=Api&P=0&w=204&h=139"/>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.euylJa-iIJgHwV2oIbLyxgHaHa&pid=Api&P=0&w=165&h=165"/>
                 </div>
             </div>
         </section>
     </div>
 
+        <!-- untuk penutup -->
     <div id="penutup">
         <div class="wrapper">
             <div class="footer">
@@ -157,10 +166,22 @@
         </div>
     </div>
 
+        <!-- untuk css loader -->
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+    
+        <!-- untuk copyright -->
     <div id="copyright">
         <div class="wrapper">
             &copy; 2022. <b>MyVisualArt.</b> All Right Reversed.<br><br> Dan website ini dibuat oleh ARDAN secara resmi.
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
